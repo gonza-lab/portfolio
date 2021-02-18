@@ -1,17 +1,52 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useLoadingScreen } from './hooks/useLoadingScreen';
+import data from './redux/data/actions';
+import appActions from './redux/app/actions';
+import { store } from './store/store';
+import { ScreenLoading } from './screen/loading/Loading';
+import { ScreenRoot } from './screen/Root';
+import { ScreenApp } from './screen/App';
+import { Header } from './component/header/Header';
+import './style/general.scss';
+
+const TIME_TRANSITION = 1;
+
+const App = () => {
+  const dispatch = useDispatch();
+  const { showLoadingScreen, showEffect } = useLoadingScreen(TIME_TRANSITION);
+
+  useEffect(() => {
+    dispatch(data.startRead());
+    dispatch(appActions.startRead());
+  }, []);
+
+  return (
+    <>
+      {showLoadingScreen && <ScreenLoading isExit={showEffect} />}
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={ScreenRoot} />
+          <Route exact path="/app/:app" component={ScreenApp} />
+          <Redirect to="/" />
+        </Switch>
+      </Router>
+    </>
+  );
+};
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

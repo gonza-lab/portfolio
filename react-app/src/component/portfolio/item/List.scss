@@ -1,0 +1,19 @@
+.portfolio-item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > * {
+    width: 33.33333333333333%;
+    flex-shrink: 0;
+    padding: 15px;
+
+    @media (max-width: 992px) {
+      width: 50%;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}

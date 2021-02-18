@@ -1,0 +1,53 @@
+.screen-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--dark-1);
+  z-index: 9995000;
+  cursor: progress;
+
+  > .vegeta {
+    position: absolute;
+    user-select: none;
+
+    > img {
+      width: 134.39px;
+      pointer-events: none;
+    }
+  }
+
+  > .vegeta {
+    bottom: 50px;
+    left: 50px;
+    width: 50%;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    > .vegeta2 {
+      margin-bottom: -1px;
+    }
+
+    > .vegeta-counter {
+      position: absolute;
+      bottom: 5%;
+      transform: translateY(-50%);
+      left: 140px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > span {
+        position: absolute;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      > img {
+        height: auto;
+        width: 110px;
+      }
+    }
+  }
+}
