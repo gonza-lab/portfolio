@@ -1,9 +1,11 @@
 import types from '../types';
+
 const initialState = {
   isNavOpen: false,
   isGettingData: false,
   isGettingApps: false,
   isSendingMail: false,
+  darkMode: false,
 };
 
 export const uiReducer = (state = initialState, { type, payload }) => {
@@ -19,6 +21,9 @@ export const uiReducer = (state = initialState, { type, payload }) => {
 
     case types.uiToggleIsSendingMail:
       return { ...state, isSendingMail: !state.isSendingMail };
+
+    case types.uiSetDarkMode:
+      return { ...state, darkMode: payload };
 
     default:
       return state;

@@ -9,9 +9,22 @@ export const PortfolioItemList = () => {
   return (
     <Fade>
       <div className="portfolio-item-list">
-        {list?.map((app) => (
-          <PortfolioItem key={app._id} name={app.app} />
-        ))}
+        <h3>Proyectos reales</h3>
+        <div>
+          {list
+            ?.filter((app) => !app.isPersonal)
+            .map((app) => (
+              <PortfolioItem key={app._id} name={app.app} />
+            ))}
+        </div>
+        <h3>Proyectos personales</h3>
+        <div>
+          {list
+            ?.filter((app) => app.isPersonal)
+            .map((app) => (
+              <PortfolioItem key={app._id} name={app.app} />
+            ))}
+        </div>
       </div>
     </Fade>
   );

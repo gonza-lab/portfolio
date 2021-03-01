@@ -15,17 +15,28 @@ export const AboutInfo = () => {
       </Fade>
       <Fade right>
         <div>
-          <h3>{about?.title[1]}</h3>
-          <p>{about?.description[1]}</p>
-          <ul>
-            {about?.info.map((info) => (
-              <li key={info[0]}>
-                <i className="fas fa-chevron-right"></i>
-                <strong>{info[0]}:</strong> {info[1]}
-              </li>
-            ))}
-          </ul>
-          <p>{about?.description[2]}</p>
+          <div className="">
+            <h3>{about?.title[1]}</h3>
+            <ul>
+              {about?.skills.map((info) => (
+                <li key={info[0]}>
+                  <i className="fas fa-chevron-right"></i>
+                  <strong>{info}</strong>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3>{about?.title[2]}</h3>
+            <ul>
+              {about?.skills_to_learn.map((info) => (
+                <li key={info[0]}>
+                  <i className="fas fa-chevron-right"></i>
+                  <strong>{info}</strong>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </Fade>
     </div>

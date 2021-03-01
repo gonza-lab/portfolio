@@ -58,12 +58,24 @@ export const App = () => {
                 <strong>{info[0]}</strong>: {info[1]}
               </li>
             ))}
-            <li>
+            <li className="li-link">
+              <a target="_blank" href={app?.url}>
+                Web
+              </a>
+            </li>
+            {/* <li>
               <strong>URL:</strong>{' '}
               <a target="_blank" href={app?.url}>
                 {app?.url.split('https://')[1]}
               </a>
-            </li>
+            </li> */}
+            {app?.repository && (
+              <li className="li-link">
+                <a target="_blank" href={app?.repository}>
+                  Repositorio
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </div>

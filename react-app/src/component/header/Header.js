@@ -31,7 +31,7 @@ export const Header = () => {
         <div className="profile__social">
           {header?.socials.map((social) => (
             <button key={social.i}>
-              <a tabIndex="_blank" href={social.href}>
+              <a target="_blank" href={social.href}>
                 <i className={social.i}></i>
               </a>
             </button>

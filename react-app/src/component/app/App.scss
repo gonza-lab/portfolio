@@ -38,6 +38,13 @@
         > li + li {
           margin-top: 10px;
         }
+
+        > .li-link {
+          > a {
+            color: inherit;
+            font-weight: 600;
+          }
+        }
       }
 
       > h3 {

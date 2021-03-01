@@ -16,4 +16,15 @@ const toggleSendMail = () => ({
   type: types.uiToggleIsSendingMail,
 });
 
-export default { toggleNav, toggleGetData, toggleGetApps, toggleSendMail };
+const setDarkMode = (payload) => ({
+  type: types.uiSetDarkMode,
+  payload,
+});
+
+export default {
+  toggleNav,
+  toggleGetData,
+  toggleGetApps,
+  toggleSendMail,
+  setDarkMode,
+};
