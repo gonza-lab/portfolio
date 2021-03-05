@@ -10,11 +10,11 @@ const send = async (req = request, res = response) => {
     await mail_service.send(body);
   } catch (error) {
     console.log(error);
-    code = error.statusCode || 500;
+    code = error?.statusCode || 500;
     resContent = {
       ok: false,
       error:
-        error.errorMessage ||
+        error?.errorMessage ||
         'Ha ocurrido un error. Hable con el administrador',
     };
   }

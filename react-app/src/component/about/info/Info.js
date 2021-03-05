@@ -19,7 +19,7 @@ export const AboutInfo = () => {
             <h3>{about?.title[1]}</h3>
             <ul>
               {about?.skills.map((info) => (
-                <li key={info[0]}>
+                <li key={typeof info === 'object' ? info[0] : info}>
                   <i className="fas fa-chevron-right"></i>
                   {typeof info === 'object' ? (
                     <>
@@ -40,7 +40,7 @@ export const AboutInfo = () => {
             <h3>{about?.title[2]}</h3>
             <ul>
               {about?.skills_to_learn.map((info) => (
-                <li key={info[0]}>
+                <li key={info}>
                   <i className="fas fa-chevron-right"></i>
                   <strong>{info}</strong>
                 </li>
