@@ -21,7 +21,17 @@ export const AboutInfo = () => {
               {about?.skills.map((info) => (
                 <li key={info[0]}>
                   <i className="fas fa-chevron-right"></i>
-                  <strong>{info}</strong>
+                  {typeof info === 'object' ? (
+                    <>
+                      <strong>{info[0]}: </strong>
+                      {info[1]}
+                    </>
+                  ) : (
+                    <>
+                      <strong>{info}</strong>
+                    </>
+                  )}
+                  {/* <strong>{info[0]}</strong> */}
                 </li>
               ))}
             </ul>
