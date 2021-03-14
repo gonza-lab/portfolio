@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 
 const createTransporter = async () => {
   const oauth2Client = new OAuth2(
-    process.env.OAUTH_CLIENTID,
+    process.env.OAUTH_CLIENT_ID,
     process.env.OAUTH_CLIENT_SECRET,
     'https://developers.google.com/oauthplayground'
   );
