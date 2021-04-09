@@ -1,5 +1,5 @@
 const { request, response } = require('express');
-const mail_service = require('../services/mail-service');
+const sendgrid_service = require('../services/sendgrid-service');
 
 const send = async (req = request, res = response) => {
   let code = 200;
@@ -7,7 +7,7 @@ const send = async (req = request, res = response) => {
   const { body } = req;
 
   try {
-    await mail_service.send(body);
+    await sendgrid_service.send(body);
   } catch (error) {
     console.log(error);
     code = error.statusCode || 500;
