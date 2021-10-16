@@ -1,0 +1,12 @@
+.header-nav {
+  color: white;
+  margin-top: 30px;
+
+  > ul {
+    margin: 0;
+    padding: 0;
+    > li {
+      list-style-type: none;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import '~react-image-gallery/styles/scss/image-gallery.scss';
+
+.app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  > .app__slider {
+    position: relative;
+
+    > .app__slider-loading {
+      height: 603.72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    > .image-gallery {
+      width: 100%;
+    }
+
+    > div:last-child {
+      padding: 30px;
+      position: absolute;
+      right: 0;
+      bottom: -70px;
+      background: #fff;
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+
+      > ul {
+        padding: 0;
+        margin: 0;
+
+        > li {
+          list-style: none;
+        }
+
+        > li + li {
+          margin-top: 10px;
+        }
+
+        > .li-link {
+          > a {
+            color: inherit;
+            font-weight: 600;
+          }
+        }
+      }
+
+      > h3 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+
+      @media (max-width: 768px) {
+        margin-top: -30px;
+        position: relative;
+      }
+    }
+  }
+
+  > .app__description {
+    padding-top: 50px;
+
+    > h2 {
+      font-size: 26px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    > p {
+      margin: 0;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 80px;
+    }
+  }
+}

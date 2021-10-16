@@ -1,0 +1,10 @@
+@import "./general.scss";
+@import "./main.scss";
+@import "hamburgers/_sass/hamburgers/hamburgers.scss";
+
+//HEADER
+
+@import "../components/header/Header.scss";
+@import "../components/header/HButton/HButton.scss";
+@import "../components/header/nav/Nav.scss";
+@import "../components/header/nav/Item/Item.scss";
