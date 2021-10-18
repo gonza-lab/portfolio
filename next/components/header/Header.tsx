@@ -1,16 +1,18 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { HeaderNav } from './nav/Nav';
 import { Link } from 'react-scroll';
 import { HeaderHButton } from './HButton/HButton';
 import useNav from '../../hooks/useNav';
+import DataContext from '../../contexts/data';
+import Image from 'next/image';
 
 const Header = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   const handleToggleNav = useCallback(() => {
-    // dispatch(ui.toggleNav());
+    setIsNavOpen((prev) => !prev);
   }, []);
-  // const { isNavOpen } = useSelector((state) => state.ui);
-  // const { header } = useSelector((state) => state.data);
-  let isNavOpen, header;
+  const { header } = useContext(DataContext);
 
   const { handleNav } = useNav(handleToggleNav, 'home');
 
@@ -18,7 +20,7 @@ const Header = () => {
     <header className={'header' + (isNavOpen ? ' header__expanded' : '')}>
       <div className="profile">
         <div className="profile__img">
-          <img alt="Gonzalo Flores" src={header?.face_img} />
+          <Image layout="fill" alt="Gonzalo Flores" src={header.face_img} />
         </div>
         <h1>
           <Link onClick={handleNav} smooth={true} duration={500} to="home">
