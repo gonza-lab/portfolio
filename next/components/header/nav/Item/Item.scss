@@ -11,7 +11,7 @@
     > i {
       margin-right: 8px;
       font-size: 23px;
-      color: var(--secondary-2);
+      color: $secondary-2;
     }
   }
 
@@ -20,7 +20,7 @@
     color: white;
 
     > i {
-      color: var(--primary-1);
+			color: $primary-1;
     }
   }
 

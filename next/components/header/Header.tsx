@@ -1,18 +1,16 @@
 import React, { useCallback } from 'react';
 import { HeaderNav } from './nav/Nav';
 import { Link } from 'react-scroll';
-import { useDispatch, useSelector } from 'react-redux';
-import ui from '../../redux/ui/actions';
 import { HeaderHButton } from './HButton/HButton';
 import useNav from '../../hooks/useNav';
 
 const Header = () => {
-  const dispatch = useDispatch();
   const handleToggleNav = useCallback(() => {
-    dispatch(ui.toggleNav());
+    // dispatch(ui.toggleNav());
   }, []);
-  const { isNavOpen } = useSelector((state) => state.ui);
-  const { header } = useSelector((state) => state.data);
+  // const { isNavOpen } = useSelector((state) => state.ui);
+  // const { header } = useSelector((state) => state.data);
+  let isNavOpen, header;
 
   const { handleNav } = useNav(handleToggleNav, 'home');
 
