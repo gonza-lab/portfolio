@@ -35,16 +35,17 @@ const theme = createTheme(
         fontSize: '1rem',
       },
     },
-    // components: {
-    //   MuiContainer: {
-    //     styleOverrides: {
-    //       root: {
-    //         paddingLeft: '8px',
-    //         paddingRight: '8px',
-    //       },
-    //     },
-    //   },
-    // },
+    components: {
+      MuiContainer: {
+        styleOverrides: {
+          root: {
+            '@media (min-width:1200px)': {
+              maxWidth: '1320px',
+            },
+          },
+        },
+      },
+    },
   })
 );
 

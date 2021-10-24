@@ -4,14 +4,21 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 1;
 
 	img {
-		position: absolute;
-		// width: calc(100% - 300px);
-		width: 100%;
+		width: calc(100% - 300px) !important;
+		min-width: none !important;
+		position: fixed !important;
+		margin: 0 !important;
+		margin-left: 300px !important;
 		height: 100%;
 		object-fit: cover;
 		z-index: 0;
+
+		@include isMobile {
+			margin-left: 0 !important;
+		}
 	}
 
 	> .hero__presentation {

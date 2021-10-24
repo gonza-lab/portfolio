@@ -9,7 +9,12 @@ export const Hero = () => {
 
   return (
     <section id="hero">
-      <Image layout="fill" alt="" src={hero?.bg_img} />
+      <Image
+        className="hero__img-container"
+        layout="fill"
+        alt=""
+        src={hero?.bg_img}
+      />
       <div className="hero__presentation">
         <Typography variant="h1">Gonzalo Flores</Typography>
         <div>
