@@ -1,16 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import { Typography } from '@mui/material';
+import Image from 'next/image';
+import React, { useContext } from 'react';
 import Typewriter from 'typewriter-effect';
-import './Hero.scss';
+import DataContext from '../../contexts/data';
 
 export const Hero = () => {
-  const { hero } = useSelector((state) => state.data);
+  const { hero } = useContext(DataContext);
 
   return (
     <section id="hero">
-      <img alt="" src={hero?.bg_img} />
+      <Image layout="fill" alt="" src={hero?.bg_img} />
       <div className="hero__presentation">
-        <h1>Gonzalo Flores</h1>
+        <Typography variant="h1">Gonzalo Flores</Typography>
         <div>
           <span>Yo soy </span>
           <Typewriter

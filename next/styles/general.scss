@@ -29,10 +29,6 @@
 	box-sizing: border-box;
 }
 
-*:not(i) {
-	font-family: "Poppins", "Raleway", sans-serif;
-}
-
 .loading {
 	overflow-y: hidden;
 	height: 100vh;
@@ -42,13 +38,11 @@ body {
 	line-height: 1.5;
 	margin: 0;
 
-	> #root {
-		> header + * {
-			margin-left: 300px;
+	header + * {
+		margin-left: 300px;
 
-			@media (max-width: 1200px) {
-				margin: 0;
-			}
+		@media (max-width: 1200px) {
+			margin: 0;
 		}
 	}
 }

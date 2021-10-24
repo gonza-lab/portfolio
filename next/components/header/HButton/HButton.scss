@@ -5,17 +5,25 @@ $hamburger-padding-x: 15px;
 $hamburger-padding-y: 15px;
 
 .header-hbutton {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  outline: none;
-  display: none !important;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	outline: none;
+	display: none !important;
 
-  .hamburger-inner {
-    background-color: var(--dark-1);
-  }
+	@media (max-width: 1200px) {
+		display: inline-block !important;
+	}
+}
 
-  @media (max-width: 1200px) {
-    display: inline-block !important;
-  }
+.hamburger {
+	&-inner,
+	&.is-active &-inner {
+		background-color: $dark-1;
+
+		&::after,
+		&::before {
+			background-color: $dark-1;
+		}
+	}
 }

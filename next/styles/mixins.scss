@@ -1,0 +1,11 @@
+@mixin isMobile {
+	@media (max-width: #{$desktopDeviceDown}) {
+		@content;
+	}
+}
+
+@mixin isDesktop {
+	@media (min-width: #{$desktopDeviceDown}) {
+		@content;
+	}
+}

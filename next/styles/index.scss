@@ -1,11 +1,21 @@
 @import "./colors.scss";
+@import "./breakpoints.scss";
+@import "./mixins.scss";
 @import "./general.scss";
-@import "./main.scss";
 @import "hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "./main.scss";
+
+//SCREENS
+@import "../screen/Root.scss";
 
 //HEADER
-
 @import "../components/header/Header.scss";
 @import "../components/header/HButton/HButton.scss";
 @import "../components/header/nav/Nav.scss";
 @import "../components/header/nav/Item/Item.scss";
+
+// HERO
+@import "../components/hero/Hero.scss";
+
+// ABOUT
+@import "../components/about/info/Info.scss";
