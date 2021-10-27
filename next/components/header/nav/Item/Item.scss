@@ -1,30 +1,32 @@
 .header-nav-item {
-  > a {
-    padding: 12px 15px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 15px;
-    color: #a8a9b4;
-    transition: 0.3s;
+	> a {
+		padding: 12px 15px;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		font-size: 15px;
+		color: #a8a9b4;
+		transition: 0.3s;
 
-    > i {
-      margin-right: 8px;
-      font-size: 23px;
-      color: $secondary-2;
-    }
-  }
+		> i,
+		> ion-icon {
+			margin-right: 8px;
+			font-size: 23px;
+			color: $secondary-2;
+		}
+	}
 
-  > a:hover,
-  .header-nav-item__active {
-    color: white;
+	> a:hover,
+	.header-nav-item__active {
+		color: white;
 
-    > i {
+		> i,
+		> ion-icon {
 			color: $primary-1;
-    }
-  }
+		}
+	}
 
-  & + * {
-    margin-top: 8px;
-  }
+	& + * {
+		margin-top: 8px;
+	}
 }

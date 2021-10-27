@@ -33,7 +33,7 @@ export const AboutInfo = () => {
               <ul>
                 {about?.skills.map((info) => (
                   <li key={typeof info === 'object' ? info[0] : info}>
-                    <i className="fas fa-chevron-right"></i>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
                     {typeof info === 'object' ? (
                       <>
                         <strong>{info[0]}: </strong>

@@ -16,7 +16,7 @@ export const HeaderNavItem = ({ to, children, i, onClick }) => {
         duration={500}
         onClick={handleNav}
       >
-        <i className={i}></i>
+        <ion-icon name={i}></ion-icon>
         {children}
       </Link>
     </li>

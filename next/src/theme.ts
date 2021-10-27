@@ -45,6 +45,24 @@ const theme = createTheme(
           },
         },
       },
+      MuiButton: {
+        styleOverrides: {
+          outlined: {
+            padding: '0 1.2rem',
+            height: '45px',
+            borderRadius: '290486px',
+            border: '2px solid rgb(23, 59, 108)',
+            color: 'rgb(23, 59, 108)',
+            textTransform: 'none',
+            fontSize: '1.2rem',
+            ':hover': {
+              border: '2px solid rgb(23, 59, 108)',
+              backgroundColor: 'rgb(23, 59, 108)',
+              color: '#fff',
+            },
+          },
+        },
+      },
     },
   })
 );

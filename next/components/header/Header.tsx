@@ -31,7 +31,7 @@ const Header = () => {
           {header?.socials.map((social) => (
             <button key={social.i}>
               <a target="_blank" href={social.href}>
-                <i className={social.i}></i>
+                <ion-icon name={social.i}></ion-icon>
               </a>
             </button>
           ))}

@@ -37,13 +37,26 @@ export default function MyApp(props: MyAppProps) {
         ></link>
 
         {/* FONT AWESOME */}
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
           integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
+        /> */}
+        {/* LINEICONS*/}
+        <link
+          href="https://cdn.lineicons.com/3.0/lineicons.css"
+          rel="stylesheet"
         />
+        <script
+          type="module"
+          src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+          noModule={false}
+          src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"
+        ></script>
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
