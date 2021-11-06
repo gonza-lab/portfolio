@@ -1,20 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Input.scss';
 
 const validationsMessages = {
   from: {
     pattern: 'Debe ingresar un email válido.',
-    required: 'Debe ingresar un email.'
+    required: 'Debe ingresar un email.',
   },
   name: {
-    required: 'Porfavor, ingrese su nombre.',
+    required: 'Por favor, ingrese su nombre.',
   },
   subject: {
-    required: 'Porfavor, ingrese el motivo de su contacto.',
+    required: 'Por favor, ingrese el motivo de su contacto.',
   },
   text: {
-    required: 'Porfavor, ingrese su mensaje.',
+    required: 'Por favor, ingrese su mensaje.',
   },
 };
 

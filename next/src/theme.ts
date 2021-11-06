@@ -60,6 +60,47 @@ const theme = createTheme(
               backgroundColor: 'rgb(23, 59, 108)',
               color: '#fff',
             },
+            ':focus': {
+              boxShadow: '0 0 0 0.125em rgb(23, 59, 108, 0.25)',
+            },
+          },
+        },
+      },
+      MuiInputLabel: {
+        styleOverrides: {
+          standard: {
+            transform: 'unset',
+            position: 'relative',
+            marginBottom: '8px',
+            fontSize: '1rem',
+            fontHeight: '400',
+            lineHeight: '1.5',
+          },
+          root: {
+            '&.Mui-focused': {
+              color: 'rgba(0, 0, 0, 0.6)',
+            },
+          },
+        },
+      },
+      MuiInputBase: {
+        styleOverrides: {
+          root: {
+            border: '1px solid #ced4da',
+            padding: '0.375rem 0.75rem',
+            transition: 'all 0.3s',
+            ':focus': {
+              color: 'red',
+            },
+            '.MuiInputLabel-standard + &': {
+              margin: '0',
+            },
+            '&::before, &::after': {
+              display: 'none',
+            },
+            '&.Mui-focused:not(.Mui-disabled)': {
+              borderColor: '#86b7fe',
+            },
           },
         },
       },

@@ -27,6 +27,8 @@ main {
 					padding-bottom: 20px;
 					position: relative;
 					color: var(--primary-2);
+					cursor: default;
+					user-select: none;
 
 					&::after {
 						content: "";
@@ -59,4 +61,19 @@ main {
 			// }
 		}
 	}
+}
+
+.box {
+	display: flex;
+	width: 100%;
+	background-color: black;
+	justify-content: space-between;
+	height: 100vh;
+	align-items: center;
+}
+
+.item {
+	width: 100px;
+	height: 100px;
+	background-color: red;
 }

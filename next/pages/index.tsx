@@ -7,6 +7,7 @@ import { Hero } from '../components/hero/Hero';
 import { About } from '../components/about/About';
 import { Portfolio } from '../components/portfolio/Portfolio';
 import BasicLayout from '../components/templates/BasicLayout';
+import { Contact } from '../components/contact/Contact';
 
 export async function getServerSideProps(context) {
   const dataService = new DataService();
@@ -36,6 +37,9 @@ export default function Index({ data, apps }) {
             </Element>
             <Element name="portfolio" className="section">
               <Portfolio />
+            </Element>
+            <Element name="contact" className="section">
+              <Contact />
             </Element>
           </main>
         </div>
