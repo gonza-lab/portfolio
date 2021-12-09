@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_sliders",
+  "info": {
+    "name": "Slider",
+    "icon": "angle-double-right"
+  },
+  "options": {},
+  "attributes": {
+    "Slide": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.slide"
+    }
+  }
+}

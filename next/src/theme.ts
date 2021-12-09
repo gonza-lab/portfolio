@@ -63,6 +63,12 @@ const theme = createTheme(
             ':focus': {
               boxShadow: '0 0 0 0.125em rgb(23, 59, 108, 0.25)',
             },
+            '&.Mui-disabled': {
+              color: 'rgb(23, 59, 108)',
+              border: '2px solid rgb(23, 59, 108)',
+              opacity: '0.5',
+              cursor: 'not-allowed',
+            },
           },
         },
       },

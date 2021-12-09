@@ -13,7 +13,7 @@ export const Hero = () => {
         className="hero__img-container"
         layout="fill"
         alt=""
-        src={hero?.bg_img}
+        src={hero.cover.url}
       />
       <div className="hero__presentation">
         <Typography variant="h1">Gonzalo Flores</Typography>
@@ -21,7 +21,7 @@ export const Hero = () => {
           <span>Yo soy </span>
           <Typewriter
             options={{
-              strings: hero?.words,
+              strings: hero.words.map(({ word }) => word),
               autoStart: true,
               loop: true,
             }}

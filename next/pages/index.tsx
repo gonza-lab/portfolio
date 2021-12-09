@@ -8,30 +8,39 @@ import { About } from '../components/about/About';
 import { Portfolio } from '../components/portfolio/Portfolio';
 import BasicLayout from '../components/templates/BasicLayout';
 import { Contact } from '../components/contact/Contact';
+import HeroInterface from '../interfaces/Hero';
 
-export async function getServerSideProps(context) {
+interface Props {
+  data: {
+    hero: HeroInterface;
+  };
+}
+
+export async function getServerSideProps() {
   const dataService = new DataService();
 
-  const data = await dataService.getAllData();
-  const apps = await dataService.getAllApps();
+  // const data = await dataService.getAllData();
+  // const apps = await dataService.getAllApps();
+  const hero = await dataService.getHero();
 
   return {
     props: {
-      data: divideBySection(data),
-      apps,
+      data: {
+        hero,
+      },
     }, // will be passed to the page component as props
   };
 }
 
-export default function Index({ data, apps }) {
+export default function Index({ data }: Props) {
   return (
-    <DataContext.Provider value={{ ...data, apps }}>
+    <DataContext.Provider value={{ ...data }}>
       <BasicLayout>
         <div className="screens-root">
           <Element name="home" className="section">
             <Hero />
           </Element>
-          <main>
+          {/* <main>
             <Element name="about" className="section">
               <About />
             </Element>
@@ -41,7 +50,7 @@ export default function Index({ data, apps }) {
             <Element name="contact" className="section">
               <Contact />
             </Element>
-          </main>
+          </main> */}
         </div>
       </BasicLayout>
     </DataContext.Provider>

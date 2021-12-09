@@ -1,4 +1,5 @@
-import { TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
+import { LoadingButton } from '@mui/lab';
 import React, { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import Loader from 'react-loader-spinner';
@@ -30,16 +31,18 @@ export const ContactForm = () => {
   const onSubmit = async (data) => {
     setIsLoading(true);
     // const { ok } = await mail_api.send(data);
-    setIsLoading(false);
+    setTimeout(() => {
+      setIsLoading(false);
 
-    if (true) {
-      setSucces(true);
-      reset(initialForm);
-      setTimeout(() => setSucces(false), 5000);
-    } else {
-      setFailed(true);
-      setTimeout(() => setFailed(false), 5000);
-    }
+      if (true) {
+        setSucces(true);
+        reset(initialForm);
+        setTimeout(() => setSucces(false), 5000);
+      } else {
+        setFailed(true);
+        setTimeout(() => setFailed(false), 5000);
+      }
+    }, 2000);
   };
 
   console.log(errors);
@@ -125,7 +128,7 @@ export const ContactForm = () => {
             />
           )}
         />
-        <div className="contact-form__status expand">
+        {/* <div className="contact-form__status expand">
           <div className="contact-form__spinner">
             <Fade top collapse when={isLoading}>
               <div>
@@ -150,11 +153,11 @@ export const ContactForm = () => {
               Su mensaje se ha enviado correctamente!
             </Fade>
           </div>
-        </div>
+        </div> */}
         <div className={'contact-form__submit expand'}>
-          <button disabled={isLoading} type="submit">
-            Enviar mensaje
-          </button>
+          <LoadingButton loading={isLoading} type="submit" variant="outlined">
+            Enviar
+          </LoadingButton>
         </div>
       </form>
     </div>

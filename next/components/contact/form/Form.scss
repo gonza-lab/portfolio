@@ -18,29 +18,7 @@
 		> .contact-form__submit {
 			display: flex;
 			justify-content: center;
-			padding-top: 15.36px;
-
-			> button {
-				background-color: var(--primary-1);
-				border: 0;
-				padding: 10px 24px;
-				color: #fff;
-				transition: 0.4s;
-				border-radius: 4px;
-				cursor: pointer;
-				outline: none;
-				font-size: 1rem;
-
-				&:hover {
-					background-color: rgba(var(--primary-1-rgb), 0.7);
-				}
-
-				&:disabled {
-					opacity: 0.5;
-					cursor: progress;
-					background-color: var(--primary-1);
-				}
-			}
+			// padding-top: 15.36px;
 		}
 
 		> .contact-form__status {

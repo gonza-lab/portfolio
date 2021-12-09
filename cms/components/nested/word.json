@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_nested_words",
+  "info": {
+    "name": "word",
+    "icon": "spell-check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "word": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
