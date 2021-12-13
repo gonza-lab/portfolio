@@ -9,10 +9,12 @@ import { Portfolio } from '../components/portfolio/Portfolio';
 import BasicLayout from '../components/templates/BasicLayout';
 import { Contact } from '../components/contact/Contact';
 import HeroInterface from '../interfaces/Hero';
+import Global from '../interfaces/Global';
 
 interface Props {
   data: {
     hero: HeroInterface;
+    global: Global;
   };
 }
 
@@ -22,10 +24,12 @@ export async function getServerSideProps() {
   // const data = await dataService.getAllData();
   // const apps = await dataService.getAllApps();
   const hero = await dataService.getHero();
+  const global = await dataService.getGlobal();
 
   return {
     props: {
       data: {
+        global,
         hero,
       },
     }, // will be passed to the page component as props

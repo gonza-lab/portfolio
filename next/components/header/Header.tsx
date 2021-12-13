@@ -12,7 +12,7 @@ const Header = () => {
   const handleToggleNav = useCallback(() => {
     setIsNavOpen((prev) => !prev);
   }, []);
-  const { header } = useContext(DataContext);
+  const { global } = useContext(DataContext);
 
   const { handleNav } = useNav(handleToggleNav, 'home');
 
@@ -20,14 +20,14 @@ const Header = () => {
     <header className={'header' + (isNavOpen ? ' header__expanded' : '')}>
       <div className="profile">
         <div className="profile__img">
-          <Image layout="fill" alt="Gonzalo Flores" src={header.face_img} />
+          <Image layout="fill" alt="Gonzalo Flores" src={global.avatar.url} />
         </div>
         <h1>
           <Link onClick={handleNav} smooth={true} duration={500} to="home">
             Gonzalo Flores
           </Link>
         </h1>
-        <div className="profile__social">
+        {/* <div className="profile__social">
           {header?.socials.map((social) => (
             <button key={social.i}>
               <a target="_blank" href={social.href}>
@@ -35,7 +35,7 @@ const Header = () => {
               </a>
             </button>
           ))}
-        </div>
+        </div> */}
       </div>
       <HeaderNav />
       <HeaderHButton onChange={handleToggleNav} isActive={isNavOpen} />

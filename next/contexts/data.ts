@@ -1,4 +1,5 @@
 import React from 'react';
+import Global from '../interfaces/Global';
 import Hero from '../interfaces/Hero';
 
 interface DataContext {
@@ -6,6 +7,7 @@ interface DataContext {
   contact?: object;
   header?: object;
   hero: Hero;
+  global: Global;
   portfolio?: object;
 }
 

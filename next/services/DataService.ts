@@ -1,5 +1,6 @@
-import App from '../interfaces/app';
-import Data from '../interfaces/data';
+import App from '../interfaces/App';
+import Data from '../interfaces/Data';
+import Global from '../interfaces/Global';
 import Hero from '../interfaces/Hero';
 import ApiService from './ApiService';
 
@@ -18,8 +19,14 @@ export default class DataService extends ApiService {
     return data;
   }
 
-  async getHero() {
+  async getHero(): Promise<Hero> {
     const { data } = await this.axios.get<Hero>('/hero');
+
+    return data;
+  }
+
+  async getGlobal(): Promise<Global> {
+    const { data } = await this.axios.get<Global>('/global');
 
     return data;
   }

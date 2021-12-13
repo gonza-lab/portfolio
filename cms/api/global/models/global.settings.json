@@ -26,6 +26,16 @@
       "type": "string",
       "default": "en",
       "maxLength": 2
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
     }
   }
 }

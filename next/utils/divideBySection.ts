@@ -1,4 +1,4 @@
-import Data from '../interfaces/data';
+import Data from '../interfaces/Data';
 
 const divideBySection = (data: Data[]) => {
   const dataDivided = data.reduce(
