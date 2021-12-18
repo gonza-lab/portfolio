@@ -518,7 +518,8 @@
         "required": [
           "id",
           "coverImage",
-          "public"
+          "public",
+          "order"
         ],
         "properties": {
           "id": {
@@ -718,12 +719,16 @@
           },
           "slug": {
             "type": "uid"
+          },
+          "order": {
+            "type": "integer"
           }
         }
       },
       "NewProject": {
         "required": [
-          "public"
+          "public",
+          "order"
         ],
         "properties": {
           "title": {
@@ -857,6 +862,9 @@
           "public": {
             "type": "boolean",
             "default": true
+          },
+          "order": {
+            "type": "integer"
           },
           "created_by": {
             "type": "string"

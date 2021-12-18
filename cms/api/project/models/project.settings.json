@@ -47,6 +47,12 @@
       "unique": false,
       "required": true,
       "private": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "private": false,
+      "unique": true
     }
   }
 }
