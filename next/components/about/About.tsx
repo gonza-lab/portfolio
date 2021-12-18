@@ -1,6 +1,6 @@
-import { Container, Typography } from '@mui/material';
 import React, { useContext } from 'react';
 
+import { Container, Typography } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
 
 import DataContext from '../../contexts/data';

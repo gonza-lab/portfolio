@@ -1,62 +1,63 @@
-div[name="about"] {
-	background-color: var(--bg-color-1);
+div[name='about'] {
+  background-color: var(--bg-color-1);
 }
 
 .about-info {
-	display: flex;
+  display: flex;
 
-	.about-info__img {
-		width: 100%;
-		height: 100%;
+  .about-info__img {
+    width: 100%;
+    height: 100%;
 
-		> img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
-	.about-info__data {
-		> div {
-			width: 100%;
+  .about-info__data {
+    > div {
+      width: 100%;
 
-			> h3 {
-				width: 100%;
-				margin: 0;
-				color: var(--primary-2);
-				font-weight: 700;
-				font-size: 22px;
-				margin-bottom: 0.5rem;
-			}
+      > h3 {
+        width: 100%;
+        margin: 0;
+        color: var(--primary-2);
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 0.5rem;
+      }
 
-			> p {
-				margin: 0;
-				margin-bottom: 1rem;
-			}
+      > p {
+        margin: 0;
+        margin-bottom: 1rem;
+      }
 
-			> ul {
-				margin: 0;
-				padding: 0;
-				display: flex;
-				flex-direction: column;
-				gap: 20px;
+      > ul {
+        // margin: 0;
+        // padding: 0;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
-				> li {
-					list-style-type: none;
-					color: var(--text-color);
-					padding-left: 19.375px;
-					position: relative;
+        > li {
+          // list-style-type: none;
+          color: var(--text-color);
+          // padding-left: 19.375px;
+          position: relative;
 
-					> i,
-					> ion-icon {
-						position: absolute;
-						left: 0;
-						top: 4px;
-						font-size: 15px;
-						color: var(--primary-1);
-					}
-				}
-			}
-		}
-	}
+          > i,
+          > ion-icon {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            font-size: 15px;
+            color: var(--primary-1);
+          }
+        }
+      }
+    }
+  }
 }

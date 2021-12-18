@@ -1,7 +1,10 @@
-import { Grid } from '@mui/material';
 import React, { useContext } from 'react';
+
+import { Grid } from '@mui/material';
+
 import Fade from 'react-reveal/Fade';
 import DataContext from '../../../contexts/data';
+import ReactMarkdown from 'react-markdown';
 
 export const AboutInfo = () => {
   const { about } = useContext(DataContext);
@@ -28,8 +31,9 @@ export const AboutInfo = () => {
             columnSpacing={{ xs: 0, md: 1 }}
             rowSpacing={{ xs: 1, md: 0 }}
           >
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12}>
               <h3>Habilidades</h3>
+              <ReactMarkdown>{about.skills}</ReactMarkdown>
               {/* <ul>
                 {about?.skills.map((info) => (
                   <li key={typeof info === 'object' ? info[0] : info}>
