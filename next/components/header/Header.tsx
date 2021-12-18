@@ -27,15 +27,15 @@ const Header = () => {
             Gonzalo Flores
           </Link>
         </h1>
-        {/* <div className="profile__social">
-          {header?.socials.map((social) => (
-            <button key={social.i}>
-              <a target="_blank" href={social.href}>
-                <ion-icon name={social.i}></ion-icon>
+        <div className="profile__social">
+          {global.socialNetworks.map((social) => (
+            <button key={social.id}>
+              <a target="_blank" rel="noreferrer" href={social.url}>
+                <ion-icon name={social.icon}></ion-icon>
               </a>
             </button>
           ))}
-        </div> */}
+        </div>
       </div>
       <HeaderNav />
       <HeaderHButton onChange={handleToggleNav} isActive={isNavOpen} />

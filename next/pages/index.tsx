@@ -25,12 +25,14 @@ export async function getServerSideProps() {
   // const apps = await dataService.getAllApps();
   const hero = await dataService.getHero();
   const global = await dataService.getGlobal();
+  const about = await dataService.getAbout();
 
   return {
     props: {
       data: {
         global,
         hero,
+        about,
       },
     }, // will be passed to the page component as props
   };
@@ -44,17 +46,17 @@ export default function Index({ data }: Props) {
           <Element name="home" className="section">
             <Hero />
           </Element>
-          {/* <main>
+          <main>
             <Element name="about" className="section">
               <About />
             </Element>
-            <Element name="portfolio" className="section">
+            {/* <Element name="portfolio" className="section">
               <Portfolio />
             </Element>
             <Element name="contact" className="section">
               <Contact />
-            </Element>
-          </main> */}
+            </Element> */}
+          </main>
         </div>
       </BasicLayout>
     </DataContext.Provider>

@@ -1,3 +1,4 @@
+import About from '../interfaces/About';
 import App from '../interfaces/App';
 import Data from '../interfaces/Data';
 import Global from '../interfaces/Global';
@@ -21,6 +22,12 @@ export default class DataService extends ApiService {
 
   async getHero(): Promise<Hero> {
     const { data } = await this.axios.get<Hero>('/hero');
+
+    return data;
+  }
+
+  async getAbout(): Promise<About> {
+    const { data } = await this.axios.get<About>('/about');
 
     return data;
   }

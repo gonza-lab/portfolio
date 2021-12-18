@@ -1,9 +1,10 @@
 import React from 'react';
+import About from '../interfaces/About';
 import Global from '../interfaces/Global';
 import Hero from '../interfaces/Hero';
 
 interface DataContext {
-  about?: object;
+  about: About;
   contact?: object;
   header?: object;
   hero: Hero;

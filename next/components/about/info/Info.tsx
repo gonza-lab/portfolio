@@ -13,14 +13,14 @@ export const AboutInfo = () => {
       columnSpacing={{ xs: 0, md: 2 }}
       rowSpacing={{ xs: 2, md: 0 }}
     >
-      <Grid item xs={12} md={3}>
+      {/* <Grid item xs={12} md={3}>
         <Fade left>
           <div className="about-info__img">
             <img alt="Gonzalo Flores" src={about?.face_img} />
           </div>
         </Fade>
-      </Grid>
-      <Grid item xs={12} md={9}>
+      </Grid> */}
+      <Grid item xs={12}>
         <Fade right>
           <Grid
             container
@@ -29,8 +29,8 @@ export const AboutInfo = () => {
             rowSpacing={{ xs: 1, md: 0 }}
           >
             <Grid item xs={12} md={6}>
-              <h3>{about?.title[1]}</h3>
-              <ul>
+              <h3>Habilidades</h3>
+              {/* <ul>
                 {about?.skills.map((info) => (
                   <li key={typeof info === 'object' ? info[0] : info}>
                     <ion-icon name="chevron-forward-outline"></ion-icon>
@@ -46,7 +46,7 @@ export const AboutInfo = () => {
                     )}
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </Grid>
             {/* <Grid item xs={12} md={6}>
               <h3>{about?.title[2]}</h3>

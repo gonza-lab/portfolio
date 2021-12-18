@@ -1,7 +1,11 @@
 import React from 'react';
 import Header from '../header/Header';
 
-const BasicLayout = ({ children }) => {
+interface HeaderProps {
+  children: React.ReactNode;
+}
+
+const BasicLayout = ({ children }: HeaderProps) => {
   return (
     <>
       <Header />
