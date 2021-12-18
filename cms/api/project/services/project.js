@@ -1,8 +1,15 @@
-'use strict';
+module.exports = {
+  /**
+   * Promise to fetch all records
+   *
+   * @return {Promise}
+   */
+  find(params, populate) {
+    return strapi.query('project').find({ ...params, public: true }, populate);
+  },
 
-/**
- * Read the documentation (https://strapi.io/documentation/v3.x/concepts/services.html#core-services)
- * to customize this service
- */
+	findOne(params, populate) {
+    return strapi.query('project').findOne({ ...params, public: true }, populate);
+  },
+};
 
-module.exports = {};

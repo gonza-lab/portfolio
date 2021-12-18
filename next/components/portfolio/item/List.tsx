@@ -5,7 +5,7 @@ import DataContext from '../../../contexts/data';
 import { Grid } from '@mui/material';
 
 export const PortfolioItemList = () => {
-  const { apps: list } = useContext(DataContext);
+  const { projects } = useContext(DataContext);
 
   return (
     <Fade>
@@ -15,9 +15,9 @@ export const PortfolioItemList = () => {
         rowSpacing={{ xs: 3, md: 0 }}
         justifyContent="center"
       >
-        {list.map((app, index) => (
-          <Grid item xs={12} md={4} key={app._id}>
-            <PortfolioItem name={app.app} />
+        {projects.map((project, index) => (
+          <Grid item xs={12} md={4} key={project.id}>
+            <PortfolioItem {...project} />
           </Grid>
         ))}
       </Grid>

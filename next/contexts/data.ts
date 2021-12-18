@@ -2,6 +2,7 @@ import React from 'react';
 import About from '../interfaces/About';
 import Global from '../interfaces/Global';
 import Hero from '../interfaces/Hero';
+import Project from '../interfaces/Project';
 
 interface DataContext {
   about: About;
@@ -9,7 +10,7 @@ interface DataContext {
   header?: object;
   hero: Hero;
   global: Global;
-  portfolio?: object;
+  projects: Project[];
 }
 
 const DataContext = React.createContext<DataContext>({} as DataContext);

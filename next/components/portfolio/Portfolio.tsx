@@ -1,17 +1,18 @@
-import { Button, Container, Typography } from '@mui/material';
-import React, { useContext } from 'react';
-import DataContext from '../../contexts/data';
-import { PortfolioItemList } from './item/List';
+import React from 'react';
+
+import { Container, Typography } from '@mui/material';
 import Fade from 'react-reveal/Fade';
 
-export const Portfolio = () => {
-  const { portfolio } = useContext(DataContext);
+import { PortfolioItemList } from './item/List';
 
+export const Portfolio = () => {
   return (
     <section id="portfolio" className="portfolio">
       <Container>
-        <Typography variant="h2">{portfolio?.title}</Typography>
-        <Typography variant="body1">{portfolio?.description[0]}</Typography>
+        <Typography variant="h2">Proyectos</Typography>
+        <Typography variant="body1">
+          Aquí podrás encontrar mis proyectos
+        </Typography>
         <Fade>
           <PortfolioItemList />
         </Fade>

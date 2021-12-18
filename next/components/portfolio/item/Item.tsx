@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 import Link from '../../link/Link';
 import Image from 'next/image';
 import { Button, Typography } from '@mui/material';
+import Project from '../../../interfaces/Project';
 
-export const PortfolioItem = ({ name }) => {
+export const PortfolioItem = ({ title, coverImage }: Project) => {
   return (
     <div className="portfolio-item">
-      <Image
-        alt="Web app"
-        layout="fill"
-        src={`${process.env.NEXT_PUBLIC_API_URL}img/app/${name}/${name}_thumb.png`}
-      />
+      <Image alt="Web app" layout="fill" src={coverImage.url} />
       <div className="portfolio-item__details">
         <Typography
           className="portfolio-item__details-content"
@@ -21,7 +18,7 @@ export const PortfolioItem = ({ name }) => {
           Results-oriented, responsive and flexible full service civil
           engineering firm.
         </Typography>
-        <Link href={`/app/${name}`}>
+        <Link href={`/app/${title}`}>
           <Button variant="outlined">
             Visitar
             <ion-icon name="chevron-forward-outline"></ion-icon>

@@ -1,23 +1,12 @@
 import About from '../interfaces/About';
-import App from '../interfaces/App';
-import Data from '../interfaces/Data';
 import Global from '../interfaces/Global';
 import Hero from '../interfaces/Hero';
+import Project from '../interfaces/Project';
 import ApiService from './ApiService';
 
 export default class DataService extends ApiService {
   constructor() {
     super();
-  }
-
-  async getAllData() {
-    const { data } = await this.axios.get<Data>('/data');
-    return data;
-  }
-
-  async getAllApps() {
-    const { data } = await this.axios.get<App[]>('/app');
-    return data;
   }
 
   async getHero(): Promise<Hero> {
@@ -28,6 +17,12 @@ export default class DataService extends ApiService {
 
   async getAbout(): Promise<About> {
     const { data } = await this.axios.get<About>('/about');
+
+    return data;
+  }
+
+  async getProjects(): Promise<Project[]> {
+    const { data } = await this.axios.get<Project[]>('/projects');
 
     return data;
   }

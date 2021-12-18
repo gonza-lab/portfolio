@@ -517,7 +517,8 @@
       "Project": {
         "required": [
           "id",
-          "coverImage"
+          "coverImage",
+          "public"
         ],
         "properties": {
           "id": {
@@ -721,6 +722,9 @@
         }
       },
       "NewProject": {
+        "required": [
+          "public"
+        ],
         "properties": {
           "title": {
             "type": "string"
@@ -849,6 +853,10 @@
           },
           "slug": {
             "type": "uid"
+          },
+          "public": {
+            "type": "boolean",
+            "default": true
           },
           "created_by": {
             "type": "string"
