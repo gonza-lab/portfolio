@@ -11,7 +11,7 @@ export const Portfolio = () => {
       <Container>
         <Typography variant="h2">Proyectos</Typography>
         <Typography variant="body1">
-          Aquí podrás encontrar mis proyectos
+          Aquí podrás encontrar los proyectos de los que fuí parte
         </Typography>
         <Fade>
           <PortfolioItemList />

@@ -24,7 +24,7 @@ export default interface Image {
   caption?: string;
   width?: number;
   height?: number;
-  formats?: Formats;
+  formats: Formats;
   hash: string;
   ext: string;
   mime: string;

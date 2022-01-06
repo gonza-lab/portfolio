@@ -53,6 +53,11 @@
       "required": true,
       "private": false,
       "unique": true
+    },
+    "hero": {
+      "type": "string",
+      "required": true,
+      "default": "Esta es una descripción para la imagen"
     }
   }
 }

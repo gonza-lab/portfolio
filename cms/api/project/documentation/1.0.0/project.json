@@ -519,7 +519,8 @@
           "id",
           "coverImage",
           "public",
-          "order"
+          "order",
+          "hero"
         ],
         "properties": {
           "id": {
@@ -722,13 +723,18 @@
           },
           "order": {
             "type": "integer"
+          },
+          "hero": {
+            "type": "string",
+            "default": "Esta es una descripción para la imagen"
           }
         }
       },
       "NewProject": {
         "required": [
           "public",
-          "order"
+          "order",
+          "hero"
         ],
         "properties": {
           "title": {
@@ -865,6 +871,10 @@
           },
           "order": {
             "type": "integer"
+          },
+          "hero": {
+            "type": "string",
+            "default": "Esta es una descripción para la imagen"
           },
           "created_by": {
             "type": "string"

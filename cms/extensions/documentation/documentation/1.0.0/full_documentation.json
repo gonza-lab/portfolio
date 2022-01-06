@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/18/2021 1:22:21 PM"
+    "x-generation-date": "12/18/2021 1:46:02 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4541,7 +4541,8 @@
           "id",
           "coverImage",
           "public",
-          "order"
+          "order",
+          "hero"
         ],
         "properties": {
           "id": {
@@ -4744,13 +4745,18 @@
           },
           "order": {
             "type": "integer"
+          },
+          "hero": {
+            "type": "string",
+            "default": "Esta es una descripción para la imagen"
           }
         }
       },
       "NewProject": {
         "required": [
           "public",
-          "order"
+          "order",
+          "hero"
         ],
         "properties": {
           "title": {
@@ -4887,6 +4893,10 @@
           },
           "order": {
             "type": "integer"
+          },
+          "hero": {
+            "type": "string",
+            "default": "Esta es una descripción para la imagen"
           },
           "created_by": {
             "type": "string"

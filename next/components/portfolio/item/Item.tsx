@@ -5,20 +5,23 @@ import Image from 'next/image';
 import { Button, Typography } from '@mui/material';
 import Project from '../../../interfaces/Project';
 
-export const PortfolioItem = ({ title, coverImage }: Project) => {
+export const PortfolioItem = ({ title, coverImage, hero, slug }: Project) => {
   return (
     <div className="portfolio-item">
-      <Image alt="Web app" layout="fill" src={coverImage.url} />
+      <Image
+        layout="fill"
+        alt={coverImage.alternativeText}
+        src={coverImage.formats.large.url}
+      />
       <div className="portfolio-item__details">
         <Typography
           className="portfolio-item__details-content"
           variant="body1"
           marginBottom={{ xs: '1.8rem' }}
         >
-          Results-oriented, responsive and flexible full service civil
-          engineering firm.
+          {hero}
         </Typography>
-        <Link href={`/app/${title}`}>
+        <Link href={`/app/${slug}`}>
           <Button variant="outlined">
             Visitar
             <ion-icon name="chevron-forward-outline"></ion-icon>

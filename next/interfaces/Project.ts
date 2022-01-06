@@ -10,4 +10,5 @@ export default interface Project {
   updated_at: Date;
   content: any[];
   coverImage: Image;
+  hero: string;
 }

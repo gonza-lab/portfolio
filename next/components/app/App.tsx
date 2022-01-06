@@ -1,9 +1,10 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, FunctionComponent } from 'react';
 import ImageGallery from 'react-image-gallery';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import './App.scss';
+import Project from '../../interfaces/Project';
 
 const images = [
   {
@@ -11,7 +12,7 @@ const images = [
   },
 ];
 
-export const App = () => {
+export const App: FunctionComponent<{ app: Project }> = () => {
   const location = useLocation();
   const { list } = useSelector((state) => state.app);
 
