@@ -9,10 +9,11 @@ import DataService from '../../services/DataService';
 import DataContext from '../../contexts/data';
 
 import BasicLayout from '../../components/templates/BasicLayout';
+import { Container, Typography } from '@mui/material';
 
 interface Props {
   data: {
-    projects: Project[];
+    project: Project;
     global: Global;
   };
 }
@@ -29,16 +30,23 @@ export async function getServerSideProps(
 
   return {
     props: {
-      data: { projects, global },
+      data: { project: projects[0], global },
     },
   };
 }
 
 const AppSection = ({ data }: Props) => {
-  console.log(data);
   return (
     <DataContext.Provider value={data}>
-      <BasicLayout></BasicLayout>
+      <BasicLayout>
+        <div className="screens-root">
+          <Container sx={{ pt: 8 }}>
+            <Typography variant="h1" color="secondary.dark" fontSize="3rem">
+              {data.project.title}
+            </Typography>
+          </Container>
+        </div>
+      </BasicLayout>
     </DataContext.Provider>
   );
 };

@@ -15,7 +15,7 @@ interface DataContext {
 
 interface DataContextSlugProject {
   global: Global;
-  projects: Project[];
+  project: Project;
 }
 
 const DataContext = React.createContext<DataContext | DataContextSlugProject>(

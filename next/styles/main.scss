@@ -77,3 +77,16 @@ main {
   height: 100px;
   background-color: red;
 }
+
+.text-underline {
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-1);
+    bottom: 0;
+    left: 0;
+  }
+}

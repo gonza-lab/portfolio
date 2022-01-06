@@ -27,6 +27,7 @@ const theme = createTheme(
       h2: {
         fontSize: '2rem',
         fontWeight: 'bold',
+        color: 'rgb(23, 59, 108)',
         [themeBreakpoints.breakpoints.down('sm')]: {
           fontSize: '1.5rem',
         },
@@ -109,6 +110,12 @@ const theme = createTheme(
             },
           },
         },
+      },
+    },
+    palette: {
+      secondary: {
+        main: 'rgb(23, 59, 108)',
+        dark: 'rgb(33, 36, 49)',
       },
     },
   })
