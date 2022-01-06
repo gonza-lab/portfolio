@@ -1,9 +1,13 @@
+import { useRouter } from 'next/router';
 import React, { useCallback } from 'react';
 import { HeaderNavListLinks } from './list-links/Links';
 
 export const HeaderNav = () => {
+  const router = useRouter();
   const handleToggleNav = useCallback(() => {
-    // dispatch(ui.toggleNav());
+    if (router.asPath !== '/') {
+      router.push('/');
+    }
   }, []);
 
   return (
