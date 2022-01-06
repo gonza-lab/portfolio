@@ -9,7 +9,8 @@ import DataService from '../../services/DataService';
 import DataContext from '../../contexts/data';
 
 import BasicLayout from '../../components/templates/BasicLayout';
-import { Container, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
+import App from '../../components/app/App';
 
 interface Props {
   data: {
@@ -39,13 +40,11 @@ const AppSection = ({ data }: Props) => {
   return (
     <DataContext.Provider value={data}>
       <BasicLayout>
-        <div className="screens-root">
+        <main className="screens-root">
           <Container sx={{ pt: 8 }}>
-            <Typography variant="h1" color="secondary.dark" fontSize="3rem">
-              {data.project.title}
-            </Typography>
+            <App app={data.project} />
           </Container>
-        </div>
+        </main>
       </BasicLayout>
     </DataContext.Provider>
   );

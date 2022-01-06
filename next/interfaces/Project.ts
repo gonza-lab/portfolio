@@ -1,3 +1,4 @@
+import { Component } from './strapi/components/Components';
 import Image from './strapi/Image';
 
 export default interface Project {
@@ -8,7 +9,7 @@ export default interface Project {
   slug: string;
   created_at: Date;
   updated_at: Date;
-  content: any[];
+  content: Component[];
   coverImage: Image;
   hero: string;
 }
