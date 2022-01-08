@@ -33,7 +33,7 @@ const theme = createTheme(
       h3: {
         fontSize: '1.5rem',
         [themeBreakpoints.breakpoints.down('sm')]: {
-          fontSize: '1rem',
+          fontSize: '1.3rem',
         },
       },
       body1: {

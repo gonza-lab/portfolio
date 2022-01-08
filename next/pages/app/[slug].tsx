@@ -1,20 +1,22 @@
 import React from 'react';
 
+import { Container } from '@mui/material';
+
 import { GetServerSidePropsContext } from 'next';
+
+import DataService from '../../services/DataService';
 
 import Project from '../../interfaces/Project';
 import Global from '../../interfaces/Global';
 
-import DataService from '../../services/DataService';
 import DataContext from '../../contexts/data';
 
 import BasicLayout from '../../components/templates/BasicLayout';
-import { Container } from '@mui/material';
 import App from '../../components/app/App';
 
 interface Props {
   data: {
-    project: Project;
+    projects: Project[];
     global: Global;
   };
 }
@@ -31,7 +33,7 @@ export async function getServerSideProps(
 
   return {
     props: {
-      data: { project: projects[0], global },
+      data: { projects: projects, global },
     },
   };
 }
@@ -42,7 +44,7 @@ const AppSection = ({ data }: Props) => {
       <BasicLayout>
         <main className="screens-root">
           <Container sx={{ py: 8 }}>
-            <App app={data.project} />
+            <App app={data.projects[0]} />
           </Container>
         </main>
       </BasicLayout>
