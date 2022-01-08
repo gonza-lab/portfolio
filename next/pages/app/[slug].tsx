@@ -9,7 +9,7 @@ import DataService from '../../services/DataService';
 import DataContext from '../../contexts/data';
 
 import BasicLayout from '../../components/templates/BasicLayout';
-import { Box, Container, Typography } from '@mui/material';
+import { Container } from '@mui/material';
 import App from '../../components/app/App';
 
 interface Props {
@@ -41,7 +41,7 @@ const AppSection = ({ data }: Props) => {
     <DataContext.Provider value={data}>
       <BasicLayout>
         <main className="screens-root">
-          <Container sx={{ pt: 8 }}>
+          <Container sx={{ py: 8 }}>
             <App app={data.project} />
           </Container>
         </main>

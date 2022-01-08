@@ -3,6 +3,7 @@ import Image from './strapi/Image';
 
 export default interface Project {
   id: number;
+  url?: string;
   title: string;
   description: string;
   date: string;

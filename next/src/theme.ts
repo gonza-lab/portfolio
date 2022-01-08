@@ -26,10 +26,14 @@ const theme = createTheme(
       },
       h2: {
         fontSize: '2rem',
-        fontWeight: 'bold',
-        color: 'rgb(23, 59, 108)',
         [themeBreakpoints.breakpoints.down('sm')]: {
           fontSize: '1.5rem',
+        },
+      },
+      h3: {
+        fontSize: '1.5rem',
+        [themeBreakpoints.breakpoints.down('sm')]: {
+          fontSize: '1rem',
         },
       },
       body1: {

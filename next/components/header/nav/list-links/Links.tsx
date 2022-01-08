@@ -12,10 +12,7 @@ export const HeaderNavListLinks = ({ onClick }) => {
         Sobre mi
       </HeaderNavItem>
       <HeaderNavItem onClick={onClick} to="portfolio" i="folder-outline">
-        Portfolio
-      </HeaderNavItem>
-      <HeaderNavItem onClick={onClick} to="contact" i="mail-outline">
-        Contacto
+        Proyectos
       </HeaderNavItem>
     </ul>
   );
