@@ -6,8 +6,6 @@ import Project from '../interfaces/Project';
 
 interface DataContext {
   about: About;
-  contact?: object;
-  header?: object;
   hero: Hero;
   global: Global;
   projects: Project[];

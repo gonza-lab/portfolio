@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 
 import DataContext from '../../contexts/data';
 import { AboutInfo } from './info/Info';
+import Markdown from '../markdown/Markdown';
 
 export const About = () => {
   const { about } = useContext(DataContext);
@@ -12,9 +13,11 @@ export const About = () => {
   return (
     <section id="about" className="about">
       <Container>
-        <Typography variant="h2">Sobre mi</Typography>
+        <Typography variant="h2" fontWeight="bolder">
+          Sobre mi
+        </Typography>
         <Typography variant="body1">
-          <ReactMarkdown>{about.content}</ReactMarkdown>
+          <Markdown>{about.content}</Markdown>
         </Typography>
         <AboutInfo />
       </Container>

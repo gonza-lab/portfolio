@@ -9,7 +9,9 @@ export const Portfolio = () => {
   return (
     <section id="portfolio" className="portfolio">
       <Container>
-        <Typography variant="h2">Proyectos</Typography>
+        <Typography variant="h2" fontWeight="bolder">
+          Proyectos
+        </Typography>
         <Typography variant="body1">
           Aquí podrás encontrar los proyectos de los que fuí parte
         </Typography>
